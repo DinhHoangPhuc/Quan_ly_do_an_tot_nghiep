@@ -1,0 +1,280 @@
+﻿namespace Ql_DATN
+{
+    partial class Frm_NopBaoCaoTienDo
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnNopBaoCao = new MaterialSkin.Controls.MaterialButton();
+            this.txtMaBaoCao = new System.Windows.Forms.TextBox();
+            this.txtTuanThu = new System.Windows.Forms.TextBox();
+            this.DTPNgayBaoCao = new System.Windows.Forms.DateTimePicker();
+            this.multitxtNoiDung = new MaterialSkin.Controls.MaterialMultiLineTextBox();
+            this.ckbCo = new MaterialSkin.Controls.MaterialCheckbox();
+            this.txtMaNhom = new System.Windows.Forms.TextBox();
+            this.txtMaGiangVien = new System.Windows.Forms.TextBox();
+            this.ckbKhong = new MaterialSkin.Controls.MaterialCheckbox();
+            this.SuspendLayout();
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(281, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(272, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Nộp Báo Cáo Tiến Độ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(61, 89);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 19);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Mã Báo Cáo:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(61, 128);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 19);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Tuần Thứ:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(61, 168);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 19);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Ngày Báo Cáo:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(61, 209);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(71, 19);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Nội Dung:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(61, 379);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 19);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Có Mặt:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(61, 424);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(75, 19);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Mã Nhóm:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(61, 467);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(103, 19);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Mã Giảng Viên:";
+            // 
+            // btnNopBaoCao
+            // 
+            this.btnNopBaoCao.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNopBaoCao.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnNopBaoCao.Depth = 0;
+            this.btnNopBaoCao.HighEmphasis = true;
+            this.btnNopBaoCao.Icon = null;
+            this.btnNopBaoCao.Location = new System.Drawing.Point(194, 519);
+            this.btnNopBaoCao.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnNopBaoCao.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnNopBaoCao.Name = "btnNopBaoCao";
+            this.btnNopBaoCao.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnNopBaoCao.Size = new System.Drawing.Size(117, 36);
+            this.btnNopBaoCao.TabIndex = 9;
+            this.btnNopBaoCao.Text = "Nộp Báo Cáo";
+            this.btnNopBaoCao.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnNopBaoCao.UseAccentColor = false;
+            this.btnNopBaoCao.UseVisualStyleBackColor = true;
+            this.btnNopBaoCao.Click += new System.EventHandler(this.btnNopBaoCao_Click);
+            // 
+            // txtMaBaoCao
+            // 
+            this.txtMaBaoCao.Location = new System.Drawing.Point(194, 88);
+            this.txtMaBaoCao.Name = "txtMaBaoCao";
+            this.txtMaBaoCao.Size = new System.Drawing.Size(147, 20);
+            this.txtMaBaoCao.TabIndex = 10;
+            // 
+            // txtTuanThu
+            // 
+            this.txtTuanThu.Location = new System.Drawing.Point(194, 127);
+            this.txtTuanThu.Name = "txtTuanThu";
+            this.txtTuanThu.Size = new System.Drawing.Size(147, 20);
+            this.txtTuanThu.TabIndex = 11;
+            // 
+            // DTPNgayBaoCao
+            // 
+            this.DTPNgayBaoCao.Location = new System.Drawing.Point(194, 166);
+            this.DTPNgayBaoCao.Name = "DTPNgayBaoCao";
+            this.DTPNgayBaoCao.Size = new System.Drawing.Size(200, 20);
+            this.DTPNgayBaoCao.TabIndex = 12;
+            // 
+            // multitxtNoiDung
+            // 
+            this.multitxtNoiDung.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.multitxtNoiDung.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.multitxtNoiDung.Depth = 0;
+            this.multitxtNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.multitxtNoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.multitxtNoiDung.Location = new System.Drawing.Point(194, 211);
+            this.multitxtNoiDung.MouseState = MaterialSkin.MouseState.HOVER;
+            this.multitxtNoiDung.Name = "multitxtNoiDung";
+            this.multitxtNoiDung.Size = new System.Drawing.Size(577, 153);
+            this.multitxtNoiDung.TabIndex = 13;
+            this.multitxtNoiDung.Text = "";
+            // 
+            // ckbCo
+            // 
+            this.ckbCo.AutoSize = true;
+            this.ckbCo.Depth = 0;
+            this.ckbCo.Location = new System.Drawing.Point(186, 367);
+            this.ckbCo.Margin = new System.Windows.Forms.Padding(0);
+            this.ckbCo.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ckbCo.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ckbCo.Name = "ckbCo";
+            this.ckbCo.ReadOnly = false;
+            this.ckbCo.Ripple = true;
+            this.ckbCo.Size = new System.Drawing.Size(54, 37);
+            this.ckbCo.TabIndex = 14;
+            this.ckbCo.Text = "Có";
+            this.ckbCo.UseVisualStyleBackColor = true;
+            // 
+            // txtMaNhom
+            // 
+            this.txtMaNhom.Location = new System.Drawing.Point(194, 423);
+            this.txtMaNhom.Name = "txtMaNhom";
+            this.txtMaNhom.Size = new System.Drawing.Size(147, 20);
+            this.txtMaNhom.TabIndex = 15;
+            // 
+            // txtMaGiangVien
+            // 
+            this.txtMaGiangVien.Location = new System.Drawing.Point(194, 468);
+            this.txtMaGiangVien.Name = "txtMaGiangVien";
+            this.txtMaGiangVien.Size = new System.Drawing.Size(147, 20);
+            this.txtMaGiangVien.TabIndex = 16;
+            // 
+            // ckbKhong
+            // 
+            this.ckbKhong.AutoSize = true;
+            this.ckbKhong.Depth = 0;
+            this.ckbKhong.Location = new System.Drawing.Point(287, 367);
+            this.ckbKhong.Margin = new System.Windows.Forms.Padding(0);
+            this.ckbKhong.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.ckbKhong.MouseState = MaterialSkin.MouseState.HOVER;
+            this.ckbKhong.Name = "ckbKhong";
+            this.ckbKhong.ReadOnly = false;
+            this.ckbKhong.Ripple = true;
+            this.ckbKhong.Size = new System.Drawing.Size(81, 37);
+            this.ckbKhong.TabIndex = 17;
+            this.ckbKhong.Text = "Không";
+            this.ckbKhong.UseVisualStyleBackColor = true;
+            // 
+            // Frm_NopBaoCaoTienDo
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 584);
+            this.Controls.Add(this.ckbKhong);
+            this.Controls.Add(this.txtMaGiangVien);
+            this.Controls.Add(this.txtMaNhom);
+            this.Controls.Add(this.ckbCo);
+            this.Controls.Add(this.multitxtNoiDung);
+            this.Controls.Add(this.DTPNgayBaoCao);
+            this.Controls.Add(this.txtTuanThu);
+            this.Controls.Add(this.txtMaBaoCao);
+            this.Controls.Add(this.btnNopBaoCao);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "Frm_NopBaoCaoTienDo";
+            this.Text = "Frm_NopBaoCaoTienDo";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private MaterialSkin.Controls.MaterialButton btnNopBaoCao;
+        private System.Windows.Forms.TextBox txtMaBaoCao;
+        private System.Windows.Forms.TextBox txtTuanThu;
+        private System.Windows.Forms.DateTimePicker DTPNgayBaoCao;
+        private MaterialSkin.Controls.MaterialMultiLineTextBox multitxtNoiDung;
+        private MaterialSkin.Controls.MaterialCheckbox ckbCo;
+        private System.Windows.Forms.TextBox txtMaNhom;
+        private System.Windows.Forms.TextBox txtMaGiangVien;
+        private MaterialSkin.Controls.MaterialCheckbox ckbKhong;
+    }
+}
