@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
 
 namespace Ql_DATN
 {
-    public partial class Form1 : MaterialForm
+    public partial class DoAnVaChamDiem : Form
     {
-        public Form1()
+        public DoAnVaChamDiem()
         {
             InitializeComponent();
         }

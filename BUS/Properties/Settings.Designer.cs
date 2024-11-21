@@ -26,11 +26,11 @@ namespace BUS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CUA-PHUC\\SQLEXPRESS;Initial Catalog=QL_DOAN;Persist Security I" +
-            "nfo=True;User ID=sa;Password=123456;Encrypt=False;TrustServerCertificate=True")]
-        public string QL_DOANConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HT2U3NT\\SQLEXPRESS;Initial Catalog=QuanLyDeTaiTotNghiep;Integ" +
+            "rated Security=True;Encrypt=False")]
+        public string QuanLyDeTaiTotNghiepConnectionString {
             get {
-                return ((string)(this["QL_DOANConnectionString"]));
+                return ((string)(this["QuanLyDeTaiTotNghiepConnectionString"]));
             }
         }
     }
