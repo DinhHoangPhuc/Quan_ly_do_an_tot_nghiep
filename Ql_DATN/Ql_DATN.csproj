@@ -61,6 +61,18 @@
     <Compile Include="ChamDiem.Designer.cs">
       <DependentUpon>ChamDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDeXuatDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeXuatDeTai.Designer.cs">
+      <DependentUpon>FormDeXuatDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDuyetDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDuyetDeTai.Designer.cs">
+      <DependentUpon>FormDuyetDeTai.cs</DependentUpon>
+    </Compile>
     <Compile Include="NopDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +83,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ChamDiem.resx">
       <DependentUpon>ChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeXuatDeTai.resx">
+      <DependentUpon>FormDeXuatDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDuyetDeTai.resx">
+      <DependentUpon>FormDuyetDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NopDoAn.resx">
       <DependentUpon>NopDoAn.cs</DependentUpon>
