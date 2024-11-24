@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Runtime.InteropServices;
-using DAL;
 using System.Windows.Forms;
 
 namespace BUS

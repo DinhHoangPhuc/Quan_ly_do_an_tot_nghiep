@@ -16,7 +16,6 @@ namespace Ql_DATN
     {
         private DoAnBus bus;
 
-
         public NopDoAn()
         {
             InitializeComponent();
@@ -28,6 +27,7 @@ namespace Ql_DATN
 
 
         }
+
         private void LoadDataToComboBox()
         {
             foreach (DataGridViewRow row in dataGridViewDoAn.Rows)

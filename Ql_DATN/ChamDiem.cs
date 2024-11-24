@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Linq;
+using BUS;
+
 namespace Ql_DATN
 {
     public partial class ChamDiem : Form
