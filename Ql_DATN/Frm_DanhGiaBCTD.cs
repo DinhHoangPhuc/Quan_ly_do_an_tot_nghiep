@@ -19,18 +19,76 @@ namespace Ql_DATN
             InitializeComponent();
         }
 
+        private void LoadComboBoxData()
+        {
+            try
+            {
+                // Kết nối CSDL để lấy danh sách Mã Báo Cáo
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var danhSachBaoCao = context.BaoCaoTienDos.Select(bc => bc.MaBaoCao).ToList();
+                    cmbMaBaoCao.DataSource = danhSachBaoCao;
+                }
+
+                // Kết nối CSDL để lấy danh sách Mã Giảng Viên
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var danhSachGiangVien = context.GiangViens.Select(gv => gv.MaGiangVien).ToList();
+                    cmbMaGiangVien.DataSource = danhSachGiangVien;
+                }
+
+                // Kết nối CSDL để lấy danh sách Mã Nhóm
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var danhSachNhom = context.NhomSinhViens.Select(n => n.MaNhom).ToList();
+                    cmbMaNhom.DataSource = danhSachNhom;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu ComboBox: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void LoadBaoCaoTienDoData()
+        {
+            try
+            {
+                // Kết nối CSDL và lấy dữ liệu từ bảng BaoCaoTienDo
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var baoCaoTienDos = context.BaoCaoTienDos.ToList();
+
+                    // Chuyển dữ liệu từ danh sách vào DataGridView
+                    dgvBaoCaoTienDo.DataSource = baoCaoTienDos.Select(bc => new
+                    {
+                        MaBaoCao = bc.MaBaoCao,
+                        TuanThu = bc.TuanThu,
+                        NgayBaoCao = bc.NgayBaoCao,
+                        NoiDung = bc.NoiDung,
+                        CoMat = bc.CoMat ? "Có" : "Không",  // Hiển thị dạng "Có"/"Không" thay vì true/false
+                        MaNhom = bc.MaNhom,
+                        MaGiangVien = bc.MaGiangVien
+                    }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu Báo Cáo Tiến Độ: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void btnGuiDanhGia_Click(object sender, EventArgs e)
         {
             try
             {
                 // Lấy dữ liệu từ giao diện
                 string maDanhGia = txtMaDanhGia.Text.Trim();
-                string maBaoCao = txtMaBaoCao.Text.Trim();
+                string maBaoCao = cmbMaBaoCao.SelectedItem.ToString(); // Lấy mã báo cáo từ ComboBox
                 DateTime ngayDanhGia = DTPNgayDanhGia.Value;
-                string maNhom = txtMaNhom.Text.Trim();
-                string maGiangVien = txtMaGiangVien.Text.Trim();
+                string maNhom = cmbMaNhom.SelectedItem.ToString(); // Lấy mã nhóm từ ComboBox
+                string maGiangVien = cmbMaGiangVien.SelectedItem.ToString(); // Lấy mã giảng viên từ ComboBox
                 string noiDung = multitxtNDDanhGia.Text.Trim();
-                
 
                 // Kiểm tra dữ liệu cơ bản
                 if (string.IsNullOrEmpty(maDanhGia) || string.IsNullOrEmpty(maBaoCao) || string.IsNullOrEmpty(maNhom) || string.IsNullOrEmpty(maGiangVien))
@@ -56,6 +114,12 @@ namespace Ql_DATN
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Frm_DanhGiaBCTD_Load(object sender, EventArgs e)
+        {
+            LoadComboBoxData();
+            LoadBaoCaoTienDoData();
         }
     }
 }
