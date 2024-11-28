@@ -42,8 +42,6 @@
             this.DTPNgayBaoCao = new System.Windows.Forms.DateTimePicker();
             this.multitxtNoiDung = new MaterialSkin.Controls.MaterialMultiLineTextBox();
             this.ckbCo = new MaterialSkin.Controls.MaterialCheckbox();
-            this.txtMaNhom = new System.Windows.Forms.TextBox();
-            this.txtMaGiangVien = new System.Windows.Forms.TextBox();
             this.ckbKhong = new MaterialSkin.Controls.MaterialCheckbox();
             this.cmbMaNhom = new System.Windows.Forms.ComboBox();
             this.cmbMaGiangVien = new System.Windows.Forms.ComboBox();
@@ -160,7 +158,7 @@
             // txtMaBaoCao
             // 
             this.txtMaBaoCao.Location = new System.Drawing.Point(259, 108);
-            this.txtMaBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaBaoCao.Name = "txtMaBaoCao";
             this.txtMaBaoCao.Size = new System.Drawing.Size(195, 22);
             this.txtMaBaoCao.TabIndex = 10;
@@ -168,7 +166,7 @@
             // txtTuanThu
             // 
             this.txtTuanThu.Location = new System.Drawing.Point(259, 156);
-            this.txtTuanThu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTuanThu.Margin = new System.Windows.Forms.Padding(4);
             this.txtTuanThu.Name = "txtTuanThu";
             this.txtTuanThu.Size = new System.Drawing.Size(195, 22);
             this.txtTuanThu.TabIndex = 11;
@@ -176,7 +174,7 @@
             // DTPNgayBaoCao
             // 
             this.DTPNgayBaoCao.Location = new System.Drawing.Point(259, 204);
-            this.DTPNgayBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DTPNgayBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.DTPNgayBaoCao.Name = "DTPNgayBaoCao";
             this.DTPNgayBaoCao.Size = new System.Drawing.Size(265, 22);
             this.DTPNgayBaoCao.TabIndex = 12;
@@ -189,7 +187,7 @@
             this.multitxtNoiDung.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.multitxtNoiDung.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.multitxtNoiDung.Location = new System.Drawing.Point(259, 260);
-            this.multitxtNoiDung.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.multitxtNoiDung.Margin = new System.Windows.Forms.Padding(4);
             this.multitxtNoiDung.MouseState = MaterialSkin.MouseState.HOVER;
             this.multitxtNoiDung.Name = "multitxtNoiDung";
             this.multitxtNoiDung.Size = new System.Drawing.Size(769, 188);
@@ -212,22 +210,6 @@
             this.ckbCo.Text = "Có";
             this.ckbCo.UseVisualStyleBackColor = true;
             // 
-            // txtMaNhom
-            // 
-            this.txtMaNhom.Location = new System.Drawing.Point(259, 521);
-            this.txtMaNhom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMaNhom.Name = "txtMaNhom";
-            this.txtMaNhom.Size = new System.Drawing.Size(195, 22);
-            this.txtMaNhom.TabIndex = 15;
-            // 
-            // txtMaGiangVien
-            // 
-            this.txtMaGiangVien.Location = new System.Drawing.Point(259, 576);
-            this.txtMaGiangVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtMaGiangVien.Name = "txtMaGiangVien";
-            this.txtMaGiangVien.Size = new System.Drawing.Size(195, 22);
-            this.txtMaGiangVien.TabIndex = 16;
-            // 
             // ckbKhong
             // 
             this.ckbKhong.AutoSize = true;
@@ -247,7 +229,7 @@
             // cmbMaNhom
             // 
             this.cmbMaNhom.FormattingEnabled = true;
-            this.cmbMaNhom.Location = new System.Drawing.Point(516, 520);
+            this.cmbMaNhom.Location = new System.Drawing.Point(259, 520);
             this.cmbMaNhom.Name = "cmbMaNhom";
             this.cmbMaNhom.Size = new System.Drawing.Size(195, 24);
             this.cmbMaNhom.TabIndex = 18;
@@ -255,7 +237,7 @@
             // cmbMaGiangVien
             // 
             this.cmbMaGiangVien.FormattingEnabled = true;
-            this.cmbMaGiangVien.Location = new System.Drawing.Point(516, 576);
+            this.cmbMaGiangVien.Location = new System.Drawing.Point(259, 576);
             this.cmbMaGiangVien.Name = "cmbMaGiangVien";
             this.cmbMaGiangVien.Size = new System.Drawing.Size(195, 24);
             this.cmbMaGiangVien.TabIndex = 19;
@@ -268,8 +250,6 @@
             this.Controls.Add(this.cmbMaGiangVien);
             this.Controls.Add(this.cmbMaNhom);
             this.Controls.Add(this.ckbKhong);
-            this.Controls.Add(this.txtMaGiangVien);
-            this.Controls.Add(this.txtMaNhom);
             this.Controls.Add(this.ckbCo);
             this.Controls.Add(this.multitxtNoiDung);
             this.Controls.Add(this.DTPNgayBaoCao);
@@ -284,7 +264,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_NopBaoCaoTienDo";
             this.Text = "Frm_NopBaoCaoTienDo";
             this.Load += new System.EventHandler(this.Frm_NopBaoCaoTienDo_Load);
@@ -309,8 +289,6 @@
         private System.Windows.Forms.DateTimePicker DTPNgayBaoCao;
         private MaterialSkin.Controls.MaterialMultiLineTextBox multitxtNoiDung;
         private MaterialSkin.Controls.MaterialCheckbox ckbCo;
-        private System.Windows.Forms.TextBox txtMaNhom;
-        private System.Windows.Forms.TextBox txtMaGiangVien;
         private MaterialSkin.Controls.MaterialCheckbox ckbKhong;
         private System.Windows.Forms.ComboBox cmbMaNhom;
         private System.Windows.Forms.ComboBox cmbMaGiangVien;
