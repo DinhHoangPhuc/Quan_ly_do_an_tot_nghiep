@@ -20,6 +20,46 @@ namespace Ql_DATN
             InitializeComponent();
         }
 
+        private void LoadComboBoxData()
+        {
+            try
+            {
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    // Lấy danh sách Mã Nhóm
+                    var danhSachNhom = context.NhomSinhViens.Select(n => n.MaNhom).ToList();
+                    if (danhSachNhom.Count > 0)
+                    {
+                        cmbMaNhom.DataSource = danhSachNhom;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có dữ liệu Mã Nhóm!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    // Lấy danh sách Mã Giảng Viên
+                    var danhSachGiangVien = context.GiangViens.Select(gv => gv.MaGiangVien).ToList();
+                    if (danhSachGiangVien.Count > 0)
+                    {
+                        cmbMaGiangVien.DataSource = danhSachGiangVien;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có dữ liệu Mã Giảng Viên!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu ComboBox: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        
+
         private void btnNopBaoCao_Click(object sender, EventArgs e)
         {
             try
@@ -30,8 +70,8 @@ namespace Ql_DATN
                 DateTime ngayBaoCao = DTPNgayBaoCao.Value;
                 string noiDung = multitxtNoiDung.Text.Trim();
                 bool coMat = ckbCo.Checked; // True nếu "Có" được chọn
-                string maNhom = txtMaNhom.Text.Trim();
-                string maGiangVien = txtMaGiangVien.Text.Trim();
+                string maNhom = cmbMaNhom.SelectedItem.ToString(); // Lấy mã nhóm từ ComboBox
+                string maGiangVien = cmbMaGiangVien.SelectedItem.ToString(); // Lấy mã giảng viên từ ComboBox
 
                 // Kiểm tra dữ liệu cơ bản
                 if (string.IsNullOrEmpty(maBaoCao) || string.IsNullOrEmpty(maNhom) || string.IsNullOrEmpty(maGiangVien))
@@ -64,6 +104,11 @@ namespace Ql_DATN
             {
                 MessageBox.Show($"Đã xảy ra lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void Frm_NopBaoCaoTienDo_Load(object sender, EventArgs e)
+        {
+            LoadComboBoxData();
         }
     }
 }

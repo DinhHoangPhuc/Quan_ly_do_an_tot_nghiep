@@ -12,7 +12,7 @@ namespace BUS
         {
             try
             {
-                string connectionString = "Data Source=ADMIN;Initial Catalog=QL_DOAN;User ID=sa;Password=123;TrustServerCertificate=True";
+                string connectionString = "Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123";
                 // Khởi tạo context LINQ (DataContext hoặc DbContext đã setup)
                 using (var context = new QLDADataContext(connectionString))
                 {
@@ -43,4 +43,3 @@ namespace BUS
         }
     }
 }
-
