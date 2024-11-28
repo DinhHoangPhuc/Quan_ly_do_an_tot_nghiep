@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BUS
+{
+    public class NopBaoCaoTienDoBUS
+    {
+        private QLDADataContext context;
+
+        public NopBaoCaoTienDoBUS()
+        {
+            context = new QLDADataContext();
+        }
+
+        public bool ThemBaoCao(string maBaoCao, int tuanThu, DateTime ngayBaoCao, string noiDung, bool coMat, string maNhom, string maGiangVien)
+        {
+            try
+            {
+                    // Tạo báo cáo mới
+                    var baoCao = new BaoCaoTienDo
+                    {
+                        MaBaoCao = maBaoCao,
+                        TuanThu = tuanThu,
+                        NgayBaoCao = ngayBaoCao,
+                        NoiDung = noiDung,
+                        CoMat = coMat,
+                        MaNhom = maNhom,
+                        MaGiangVien = maGiangVien
+                    };
+
+                    // Thêm vào database
+                    context.BaoCaoTienDos.InsertOnSubmit(baoCao);
+                    context.SubmitChanges();
+
+                return true; // Thành công
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Lỗi: {ex.Message}");
+                return false; // Thất bại
+            }
+        }
+    }
+}

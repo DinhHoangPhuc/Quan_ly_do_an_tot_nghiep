@@ -9,6 +9,7 @@
       <Column Name="CoMat" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
       <Column Name="MaNhom" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="MaGiangVien" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="BaoCaoTienDo_DanhGiaBaoCaoTienDo" Member="DanhGiaBaoCaoTienDos" ThisKey="MaBaoCao" OtherKey="MaBaoCao" Type="DanhGiaBaoCaoTienDo" />
       <Association Name="GiangVien_BaoCaoTienDo" Member="GiangVien" ThisKey="MaGiangVien" OtherKey="MaGiangVien" Type="GiangVien" IsForeignKey="true" />
       <Association Name="NhomSinhVien_BaoCaoTienDo" Member="NhomSinhVien" ThisKey="MaNhom" OtherKey="MaNhom" Type="NhomSinhVien" IsForeignKey="true" />
     </Type>
@@ -47,6 +48,7 @@
       <Association Name="GiangVien_BaoCaoTienDo" Member="BaoCaoTienDos" ThisKey="MaGiangVien" OtherKey="MaGiangVien" Type="BaoCaoTienDo" />
       <Association Name="GiangVien_DeTai" Member="DeTais" ThisKey="MaGiangVien" OtherKey="MaGVHuongDan" Type="DeTai" />
       <Association Name="GiangVien_DeTai1" Member="DeTais1" ThisKey="MaGiangVien" OtherKey="MaGVPhanBien" Type="DeTai" />
+      <Association Name="GiangVien_DanhGiaBaoCaoTienDo" Member="DanhGiaBaoCaoTienDos" ThisKey="MaGiangVien" OtherKey="MaGiangVien" Type="DanhGiaBaoCaoTienDo" />
       <Association Name="BoMon_GiangVien" Member="BoMon" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="BoMon" IsForeignKey="true" />
       <Association Name="NguoiDung_GiangVien" Member="NguoiDung" ThisKey="TenDangNhap" OtherKey="TenDangNhap" Type="NguoiDung" IsForeignKey="true" />
     </Type>
@@ -164,6 +166,7 @@
       <Association Name="NhomSinhVien_DangKyDeTai" Member="DangKyDeTais" ThisKey="MaNhom" OtherKey="MaNhom" Type="DangKyDeTai" />
       <Association Name="NhomSinhVien_DoAnVaDiem" Member="DoAnVaDiems" ThisKey="MaNhom" OtherKey="MaNhom" Type="DoAnVaDiem" />
       <Association Name="NhomSinhVien_ThanhVienNhom" Member="ThanhVienNhoms" ThisKey="MaNhom" OtherKey="MaNhom" Type="ThanhVienNhom" />
+      <Association Name="NhomSinhVien_DanhGiaBaoCaoTienDo" Member="DanhGiaBaoCaoTienDos" ThisKey="MaNhom" OtherKey="MaNhom" Type="DanhGiaBaoCaoTienDo" />
       <Association Name="SinhVien_NhomSinhVien" Member="SinhVien" ThisKey="MaNhomTruong" OtherKey="MaSinhVien" Type="SinhVien" IsForeignKey="true" />
     </Type>
   </Table>
@@ -232,6 +235,19 @@
       <Association Name="BoMon_DeTai" Member="BoMon" ThisKey="MaBoMon" OtherKey="MaBoMon" Type="BoMon" IsForeignKey="true" />
       <Association Name="GiangVien_DeTai" Member="GiangVien" ThisKey="MaGVHuongDan" OtherKey="MaGiangVien" Type="GiangVien" IsForeignKey="true" />
       <Association Name="GiangVien_DeTai1" Member="GiangVien1" ThisKey="MaGVPhanBien" OtherKey="MaGiangVien" Type="GiangVien" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DanhGiaBaoCaoTienDo" Member="DanhGiaBaoCaoTienDos">
+    <Type Name="DanhGiaBaoCaoTienDo">
+      <Column Name="MaDanhGia" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MaBaoCao" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="NgayDanhGia" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="NoiDung" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MaNhom" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="MaGiangVien" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Association Name="BaoCaoTienDo_DanhGiaBaoCaoTienDo" Member="BaoCaoTienDo" ThisKey="MaBaoCao" OtherKey="MaBaoCao" Type="BaoCaoTienDo" IsForeignKey="true" />
+      <Association Name="GiangVien_DanhGiaBaoCaoTienDo" Member="GiangVien" ThisKey="MaGiangVien" OtherKey="MaGiangVien" Type="GiangVien" IsForeignKey="true" />
+      <Association Name="NhomSinhVien_DanhGiaBaoCaoTienDo" Member="NhomSinhVien" ThisKey="MaNhom" OtherKey="MaNhom" Type="NhomSinhVien" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
