@@ -75,16 +75,16 @@ namespace Ql_DATN
             string maDeTai = cbbMaDeTai.SelectedValue.ToString();
             string maNhom = cbbMaNhom.SelectedValue.ToString();
             DateTime ngayNop = dateTimeNgayNop.Value;
-            bool success = bus.AddData(maDeTai, maNhom, ngayNop, ID);
+            //bool success = bus.AddData(maDeTai, maNhom, ngayNop, ID);
 
-            if (success)
-            {
-                MessageBox.Show("Thêm thành công");
-            }
-            else
-            {
-                MessageBox.Show("Lỗi");
-            }
+            //if (success)
+            //{
+            //    MessageBox.Show("Thêm thành công");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Lỗi");
+            //}
             LoadDoAn();
 
 

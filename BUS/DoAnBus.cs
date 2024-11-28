@@ -28,10 +28,10 @@ namespace BUS
         {
             return dal.GetNhomList();
         }
-        public bool AddData(string maDeTai, string maNhom, DateTime ngayNop, string ID)
-        {
-            return dal.AddData(maDeTai, maNhom, ngayNop, ID);
-        }
+        //public bool AddData(string maDeTai, string maNhom, DateTime ngayNop, string ID)
+        //{
+        //    return dal.AddData(maDeTai, maNhom, ngayNop, ID);
+        //}
 
         public List<dynamic> LoadDoAn()
         {

@@ -80,27 +80,27 @@ namespace Ql_DATN
                 bool isValidDiemGVHD = float.TryParse(txtDiemGVHD.Text, out diemGVHuongDan);
                 bool isValidDiemGVPB = float.TryParse(txtDiemGVPB.Text, out diemGVPhanBien);
 
-                if (isValidDiemGVHD && isValidDiemGVPB)
-                {
-                    diemGVHuongDan = (float)Math.Round(diemGVHuongDan, 2);
-                    diemGVPhanBien = (float)Math.Round(diemGVPhanBien, 2);
-                    bool isUpdated = bus.AddData(id, noiDungDoAn, nhanXet, diemGVHuongDan, diemGVPhanBien, ngayCham);
+                //if (isValidDiemGVHD && isValidDiemGVPB)
+                //{
+                //    diemGVHuongDan = (float)Math.Round(diemGVHuongDan, 2);
+                //    diemGVPhanBien = (float)Math.Round(diemGVPhanBien, 2);
+                //    bool isUpdated = bus.AddData(id, noiDungDoAn, nhanXet, diemGVHuongDan, diemGVPhanBien, ngayCham);
 
-                    if (isUpdated)
-                    {
+                //    if (isUpdated)
+                //    {
 
-                        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LoadDataToGrid();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Điểm không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //        MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //        LoadDataToGrid();
+                //    }
+                //    else
+                //    {
+                //        MessageBox.Show("Cập nhật thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Điểm không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }
             catch (Exception ex)
             {

@@ -57,6 +57,18 @@
     <Compile Include="ChamDiem.Designer.cs">
       <DependentUpon>ChamDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDeXuatDeTai.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     <Compile Include="FormDuyetDeTai.Designer.cs">
       <DependentUpon>FormDuyetDeTai.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
     <Compile Include="NopDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +98,17 @@
     <EmbeddedResource Include="ChamDiem.resx">
       <DependentUpon>ChamDiem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDeXuatDeTai.resx">
       <DependentUpon>FormDeXuatDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDuyetDeTai.resx">
       <DependentUpon>FormDuyetDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NopDoAn.resx">
       <DependentUpon>NopDoAn.cs</DependentUpon>
@@ -116,6 +140,10 @@
     <ProjectReference Include="..\BUS\BUS.csproj">
       <Project>{2ccd7f51-b951-4df2-9f5d-547cd6b8be41}</Project>
       <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{0236403f-3c8c-484d-8aaa-b3d6b79bf989}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

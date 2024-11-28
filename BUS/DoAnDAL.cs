@@ -41,44 +41,44 @@ namespace BUS
 
             return result.Cast<dynamic>().ToList();
         }
-        public bool AddData(string maDeTai, string maNhom, DateTime ngayNop, string ID)
-        {
-            try
-            {
-                // Kiểm tra trùng lặp trước khi thêm dữ liệu
-                if (CheckForDuplicate(maDeTai, maNhom, ID))
-                {
-                    MessageBox.Show("Dữ liệu đã tồn tại.");
-                    return false; // Nếu trùng lặp, không thêm dữ liệu
-                }
-                var newRecord = new DoAnVaDiem()
-                {
-                    MaDeTai = maDeTai,
-                    MaNhom = maNhom,
-                    NgayNopDoAn = ngayNop,
-                    Id = ID
-                };
+        //public bool AddData(string maDeTai, string maNhom, DateTime ngayNop, string ID)
+        //{
+        //    try
+        //    {
+        //        // Kiểm tra trùng lặp trước khi thêm dữ liệu
+        //        if (CheckForDuplicate(maDeTai, maNhom, ID))
+        //        {
+        //            MessageBox.Show("Dữ liệu đã tồn tại.");
+        //            return false; // Nếu trùng lặp, không thêm dữ liệu
+        //        }
+        //        var newRecord = new DoAnVaDiem()
+        //        {
+        //            MaDeTai = maDeTai,
+        //            MaNhom = maNhom,
+        //            NgayNopDoAn = ngayNop,
+        //            Id = ID
+        //        };
 
-                // Thêm bản ghi vào cơ sở dữ liệu
-                db.DoAnVaDiems.InsertOnSubmit(newRecord);
-                db.SubmitChanges();
+        //        // Thêm bản ghi vào cơ sở dữ liệu
+        //        db.DoAnVaDiems.InsertOnSubmit(newRecord);
+        //        db.SubmitChanges();
 
-                return true; // Thêm thành công
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}");
-                return false; // Thêm thất bại
-            }
-        }
-        public bool CheckForDuplicate(string maDeTai, string maNhom, string ID)
-        {
+        //        return true; // Thêm thành công
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show($"Lỗi: {ex.Message}");
+        //        return false; // Thêm thất bại
+        //    }
+        //}
+        //public bool CheckForDuplicate(string maDeTai, string maNhom, string ID)
+        //{
 
-            var duplicateRecord = db.DoAnVaDiems
-                .Where(x => x.MaDeTai == maDeTai && x.MaNhom == maNhom && x.Id == ID)
-                .FirstOrDefault();
+        //    var duplicateRecord = db.DoAnVaDiems
+        //        .Where(x => x.MaDeTai == maDeTai && x.MaNhom == maNhom && x.Id == ID)
+        //        .FirstOrDefault();
 
-            return duplicateRecord != null;
-        }
+        //    return duplicateRecord != null;
+        //}
     }
 }

@@ -34,12 +34,12 @@ namespace BUS
 
         }
 
-        public bool AddData(string id, string noiDungDoAn, string nhanXet, float? diemGVHuongDan, float? diemGVPhanBien, DateTime? ngayCham)
-        {
+        //public bool AddData(string id, string noiDungDoAn, string nhanXet, float? diemGVHuongDan, float? diemGVPhanBien, DateTime? ngayCham)
+        //{
 
-            return dal.AddData(id, noiDungDoAn, nhanXet, diemGVHuongDan, diemGVPhanBien, ngayCham);
+        //    return dal.AddData(id, noiDungDoAn, nhanXet, diemGVHuongDan, diemGVPhanBien, ngayCham);
 
-        }
+        //}
 
     }
 }
