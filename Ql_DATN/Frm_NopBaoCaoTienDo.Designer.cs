@@ -176,7 +176,7 @@
             this.DTPNgayBaoCao.Location = new System.Drawing.Point(259, 204);
             this.DTPNgayBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.DTPNgayBaoCao.Name = "DTPNgayBaoCao";
-            this.DTPNgayBaoCao.Size = new System.Drawing.Size(265, 22);
+            this.DTPNgayBaoCao.Size = new System.Drawing.Size(242, 22);
             this.DTPNgayBaoCao.TabIndex = 12;
             // 
             // multitxtNoiDung

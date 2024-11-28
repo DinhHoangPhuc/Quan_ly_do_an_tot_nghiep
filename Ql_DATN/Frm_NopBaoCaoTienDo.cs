@@ -26,7 +26,7 @@ namespace Ql_DATN
             {
                 using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
                 {
-                    // Lấy danh sách Mã Nhóm
+                    //Lấy danh sách Mã Nhóm
                     var danhSachNhom = context.NhomSinhViens.Select(n => n.MaNhom).ToList();
                     if (danhSachNhom.Count > 0)
                     {

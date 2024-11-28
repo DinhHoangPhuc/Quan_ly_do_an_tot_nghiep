@@ -16,7 +16,7 @@ namespace BUS
                 // Khởi tạo context LINQ (DataContext hoặc DbContext đã setup)
                 using (var context = new QLDADataContext(connectionString))
                 {
-                    // Tạo báo cáo mới
+                    //Tạo báo cáo mới
                     var baoCao = new BaoCaoTienDo
                     {
                         MaBaoCao = maBaoCao,
