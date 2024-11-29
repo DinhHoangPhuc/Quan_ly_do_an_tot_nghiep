@@ -50,7 +50,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 11);
+            this.label1.Location = new System.Drawing.Point(383, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(416, 38);
@@ -94,7 +94,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(81, 394);
+            this.label5.Location = new System.Drawing.Point(577, 112);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 22);
@@ -130,7 +130,7 @@
             this.btnGuiDanhGia.Depth = 0;
             this.btnGuiDanhGia.HighEmphasis = true;
             this.btnGuiDanhGia.Icon = null;
-            this.btnGuiDanhGia.Location = new System.Drawing.Point(265, 612);
+            this.btnGuiDanhGia.Location = new System.Drawing.Point(581, 337);
             this.btnGuiDanhGia.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnGuiDanhGia.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuiDanhGia.Name = "btnGuiDanhGia";
@@ -146,7 +146,7 @@
             // txtMaDanhGia
             // 
             this.txtMaDanhGia.Location = new System.Drawing.Point(265, 113);
-            this.txtMaDanhGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaDanhGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaDanhGia.Name = "txtMaDanhGia";
             this.txtMaDanhGia.Size = new System.Drawing.Size(200, 22);
             this.txtMaDanhGia.TabIndex = 8;
@@ -154,7 +154,7 @@
             // DTPNgayDanhGia
             // 
             this.DTPNgayDanhGia.Location = new System.Drawing.Point(265, 224);
-            this.DTPNgayDanhGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DTPNgayDanhGia.Margin = new System.Windows.Forms.Padding(4);
             this.DTPNgayDanhGia.Name = "DTPNgayDanhGia";
             this.DTPNgayDanhGia.Size = new System.Drawing.Size(265, 22);
             this.DTPNgayDanhGia.TabIndex = 10;
@@ -166,11 +166,11 @@
             this.multitxtNDDanhGia.Depth = 0;
             this.multitxtNDDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.multitxtNDDanhGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.multitxtNDDanhGia.Location = new System.Drawing.Point(265, 396);
-            this.multitxtNDDanhGia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.multitxtNDDanhGia.Location = new System.Drawing.Point(581, 138);
+            this.multitxtNDDanhGia.Margin = new System.Windows.Forms.Padding(4);
             this.multitxtNDDanhGia.MouseState = MaterialSkin.MouseState.HOVER;
             this.multitxtNDDanhGia.Name = "multitxtNDDanhGia";
-            this.multitxtNDDanhGia.Size = new System.Drawing.Size(736, 185);
+            this.multitxtNDDanhGia.Size = new System.Drawing.Size(552, 185);
             this.multitxtNDDanhGia.TabIndex = 11;
             this.multitxtNDDanhGia.Text = "";
             // 
@@ -201,18 +201,18 @@
             // dgvBaoCaoTienDo
             // 
             this.dgvBaoCaoTienDo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCaoTienDo.Location = new System.Drawing.Point(537, 96);
+            this.dgvBaoCaoTienDo.Location = new System.Drawing.Point(85, 439);
             this.dgvBaoCaoTienDo.Name = "dgvBaoCaoTienDo";
             this.dgvBaoCaoTienDo.RowHeadersWidth = 51;
             this.dgvBaoCaoTienDo.RowTemplate.Height = 24;
-            this.dgvBaoCaoTienDo.Size = new System.Drawing.Size(626, 293);
+            this.dgvBaoCaoTienDo.Size = new System.Drawing.Size(1048, 293);
             this.dgvBaoCaoTienDo.TabIndex = 17;
             // 
             // Frm_DanhGiaBCTD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 689);
+            this.ClientSize = new System.Drawing.Size(1210, 778);
             this.Controls.Add(this.dgvBaoCaoTienDo);
             this.Controls.Add(this.cmbMaGiangVien);
             this.Controls.Add(this.cmbMaNhom);
@@ -228,7 +228,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frm_DanhGiaBCTD";
             this.Text = "Frm_DanhGiaBCTD";
             this.Load += new System.EventHandler(this.Frm_DanhGiaBCTD_Load);
