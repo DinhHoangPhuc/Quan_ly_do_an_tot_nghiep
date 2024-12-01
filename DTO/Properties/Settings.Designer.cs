@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BUS.Properties {
+namespace DTO.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -20,17 +20,6 @@ namespace BUS.Properties {
         public static Settings Default {
             get {
                 return defaultInstance;
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HT2U3NT\\SQLEXPRESS;Initial Catalog=QuanLyDeTaiTotNghiep;Integ" +
-            "rated Security=True;Encrypt=False")]
-        public string QuanLyDeTaiTotNghiepConnectionString {
-            get {
-                return ((string)(this["QuanLyDeTaiTotNghiepConnectionString"]));
             }
         }
         

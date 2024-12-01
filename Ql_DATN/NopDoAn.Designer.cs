@@ -33,14 +33,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbbMaNhom = new System.Windows.Forms.ComboBox();
-            this.cbbMaDeTai = new System.Windows.Forms.ComboBox();
             this.btnHuy = new MaterialSkin.Controls.MaterialButton();
             this.btnNop = new MaterialSkin.Controls.MaterialButton();
             this.dataGridViewDoAn = new System.Windows.Forms.DataGridView();
             this.dateTimeNgayNop = new System.Windows.Forms.DateTimePicker();
+            this.cbbMaNhom = new MaterialSkin.Controls.MaterialComboBox();
+            this.cbbMaDeTai = new MaterialSkin.Controls.MaterialComboBox();
+            this.rtxNoiDungDoAn = new MaterialSkin.Controls.MaterialTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDoAn)).BeginInit();
             this.SuspendLayout();
@@ -67,7 +67,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(405, 69);
+            this.label5.Location = new System.Drawing.Point(332, 65);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 20);
             this.label5.TabIndex = 4;
@@ -76,7 +76,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(20, 122);
+            this.label6.Location = new System.Drawing.Point(21, 167);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(74, 20);
             this.label6.TabIndex = 5;
@@ -84,10 +84,10 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtID);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.cbbMaNhom);
+            this.panel1.Controls.Add(this.rtxNoiDungDoAn);
             this.panel1.Controls.Add(this.cbbMaDeTai);
+            this.panel1.Controls.Add(this.cbbMaNhom);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
@@ -98,42 +98,17 @@
             this.panel1.Controls.Add(this.dateTimeNgayNop);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(776, 512);
+            this.panel1.Size = new System.Drawing.Size(847, 595);
             this.panel1.TabIndex = 12;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(510, 119);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(200, 26);
-            this.txtID.TabIndex = 25;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(410, 120);
+            this.label3.Location = new System.Drawing.Point(331, 167);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 20);
+            this.label3.Size = new System.Drawing.Size(116, 20);
             this.label3.TabIndex = 24;
-            this.label3.Text = "ID";
-            // 
-            // cbbMaNhom
-            // 
-            this.cbbMaNhom.FormattingEnabled = true;
-            this.cbbMaNhom.Location = new System.Drawing.Point(129, 65);
-            this.cbbMaNhom.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbMaNhom.Name = "cbbMaNhom";
-            this.cbbMaNhom.Size = new System.Drawing.Size(230, 28);
-            this.cbbMaNhom.TabIndex = 23;
-            // 
-            // cbbMaDeTai
-            // 
-            this.cbbMaDeTai.FormattingEnabled = true;
-            this.cbbMaDeTai.Location = new System.Drawing.Point(129, 120);
-            this.cbbMaDeTai.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbbMaDeTai.Name = "cbbMaDeTai";
-            this.cbbMaDeTai.Size = new System.Drawing.Size(230, 28);
-            this.cbbMaDeTai.TabIndex = 21;
+            this.label3.Text = "Nội dung đồ án";
             // 
             // btnHuy
             // 
@@ -144,7 +119,7 @@
             this.btnHuy.ForeColor = System.Drawing.Color.Gray;
             this.btnHuy.HighEmphasis = true;
             this.btnHuy.Icon = null;
-            this.btnHuy.Location = new System.Drawing.Point(409, 180);
+            this.btnHuy.Location = new System.Drawing.Point(271, 242);
             this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnHuy.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnHuy.Name = "btnHuy";
@@ -164,7 +139,7 @@
             this.btnNop.Depth = 0;
             this.btnNop.HighEmphasis = true;
             this.btnNop.Icon = null;
-            this.btnNop.Location = new System.Drawing.Point(242, 180);
+            this.btnNop.Location = new System.Drawing.Point(139, 252);
             this.btnNop.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnNop.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnNop.Name = "btnNop";
@@ -180,26 +155,87 @@
             // dataGridViewDoAn
             // 
             this.dataGridViewDoAn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDoAn.Location = new System.Drawing.Point(22, 245);
+            this.dataGridViewDoAn.Location = new System.Drawing.Point(15, 317);
             this.dataGridViewDoAn.Name = "dataGridViewDoAn";
             this.dataGridViewDoAn.RowHeadersWidth = 62;
             this.dataGridViewDoAn.RowTemplate.Height = 28;
-            this.dataGridViewDoAn.Size = new System.Drawing.Size(688, 265);
+            this.dataGridViewDoAn.Size = new System.Drawing.Size(696, 265);
             this.dataGridViewDoAn.TabIndex = 11;
             this.dataGridViewDoAn.SelectionChanged += new System.EventHandler(this.dataGridViewDoAn_SelectionChanged);
             // 
             // dateTimeNgayNop
             // 
-            this.dateTimeNgayNop.Location = new System.Drawing.Point(510, 58);
+            this.dateTimeNgayNop.Location = new System.Drawing.Point(472, 60);
             this.dateTimeNgayNop.Name = "dateTimeNgayNop";
-            this.dateTimeNgayNop.Size = new System.Drawing.Size(200, 26);
+            this.dateTimeNgayNop.Size = new System.Drawing.Size(208, 26);
             this.dateTimeNgayNop.TabIndex = 10;
+            // 
+            // cbbMaNhom
+            // 
+            this.cbbMaNhom.AutoResize = false;
+            this.cbbMaNhom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbbMaNhom.Depth = 0;
+            this.cbbMaNhom.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbbMaNhom.DropDownHeight = 174;
+            this.cbbMaNhom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaNhom.DropDownWidth = 121;
+            this.cbbMaNhom.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbbMaNhom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbbMaNhom.FormattingEnabled = true;
+            this.cbbMaNhom.IntegralHeight = false;
+            this.cbbMaNhom.ItemHeight = 43;
+            this.cbbMaNhom.Location = new System.Drawing.Point(120, 58);
+            this.cbbMaNhom.MaxDropDownItems = 4;
+            this.cbbMaNhom.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbbMaNhom.Name = "cbbMaNhom";
+            this.cbbMaNhom.Size = new System.Drawing.Size(190, 49);
+            this.cbbMaNhom.StartIndex = 0;
+            this.cbbMaNhom.TabIndex = 26;
+            // 
+            // cbbMaDeTai
+            // 
+            this.cbbMaDeTai.AutoResize = false;
+            this.cbbMaDeTai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.cbbMaDeTai.Depth = 0;
+            this.cbbMaDeTai.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.cbbMaDeTai.DropDownHeight = 174;
+            this.cbbMaDeTai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbMaDeTai.DropDownWidth = 121;
+            this.cbbMaDeTai.Font = new System.Drawing.Font("Roboto Medium", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.cbbMaDeTai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.cbbMaDeTai.FormattingEnabled = true;
+            this.cbbMaDeTai.IntegralHeight = false;
+            this.cbbMaDeTai.ItemHeight = 43;
+            this.cbbMaDeTai.Location = new System.Drawing.Point(120, 158);
+            this.cbbMaDeTai.MaxDropDownItems = 4;
+            this.cbbMaDeTai.MouseState = MaterialSkin.MouseState.OUT;
+            this.cbbMaDeTai.Name = "cbbMaDeTai";
+            this.cbbMaDeTai.Size = new System.Drawing.Size(190, 49);
+            this.cbbMaDeTai.StartIndex = 0;
+            this.cbbMaDeTai.TabIndex = 27;
+            // 
+            // rtxNoiDungDoAn
+            // 
+            this.rtxNoiDungDoAn.AnimateReadOnly = false;
+            this.rtxNoiDungDoAn.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxNoiDungDoAn.Depth = 0;
+            this.rtxNoiDungDoAn.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.rtxNoiDungDoAn.LeadingIcon = null;
+            this.rtxNoiDungDoAn.Location = new System.Drawing.Point(473, 159);
+            this.rtxNoiDungDoAn.MaxLength = 50;
+            this.rtxNoiDungDoAn.MouseState = MaterialSkin.MouseState.OUT;
+            this.rtxNoiDungDoAn.Multiline = false;
+            this.rtxNoiDungDoAn.Name = "rtxNoiDungDoAn";
+            this.rtxNoiDungDoAn.Size = new System.Drawing.Size(204, 50);
+            this.rtxNoiDungDoAn.TabIndex = 28;
+            this.rtxNoiDungDoAn.Text = "";
+            this.rtxNoiDungDoAn.TrailingIcon = null;
             // 
             // NopDoAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 546);
+            this.ClientSize = new System.Drawing.Size(871, 619);
             this.Controls.Add(this.panel1);
             this.Name = "NopDoAn";
             this.Text = "NopDoAn";
@@ -221,9 +257,9 @@
         private MaterialSkin.Controls.MaterialButton btnNop;
         private System.Windows.Forms.DateTimePicker dateTimeNgayNop;
         private MaterialSkin.Controls.MaterialButton btnHuy;
-        private System.Windows.Forms.ComboBox cbbMaDeTai;
-        private System.Windows.Forms.ComboBox cbbMaNhom;
-        private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label3;
+        private MaterialSkin.Controls.MaterialComboBox cbbMaDeTai;
+        private MaterialSkin.Controls.MaterialComboBox cbbMaNhom;
+        private MaterialSkin.Controls.MaterialTextBox rtxNoiDungDoAn;
     }
 }

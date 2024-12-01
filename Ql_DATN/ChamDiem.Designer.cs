@@ -30,29 +30,25 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.rtxtNhanXetGVPB = new System.Windows.Forms.RichTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dateTimeNgayBaoCao = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.dateTimeNgayDanhGia = new System.Windows.Forms.DateTimePicker();
             this.dgvDoAnVaChamDiem = new System.Windows.Forms.DataGridView();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnLuu = new MaterialSkin.Controls.MaterialButton();
-            this.txtDiemGVHD = new System.Windows.Forms.TextBox();
-            this.txtDiemGVPB = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDiemCuoiCung = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtMaNhom = new System.Windows.Forms.TextBox();
-            this.txtMaDeTai = new System.Windows.Forms.TextBox();
-            this.rtxNoiDungDoAn = new System.Windows.Forms.RichTextBox();
-            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtMaNhom = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.rtxtNhanXetGVPB = new MaterialSkin.Controls.MaterialTextBox();
+            this.btnHuy = new MaterialSkin.Controls.MaterialButton();
+            this.txtMaDeTai = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.txtDiemCuoiCung = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.txtDiemGVPB = new MaterialSkin.Controls.MaterialMaskedTextBox();
+            this.txtDiemGVHD = new MaterialSkin.Controls.MaterialMaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoAnVaChamDiem)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,39 +73,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mã nhóm";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(20, 136);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Đồ Án";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(11, 218);
+            this.label8.Location = new System.Drawing.Point(20, 141);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(268, 20);
             this.label8.TabIndex = 9;
             this.label8.Text = "Nhận xét của giáo viên phản biện";
             // 
-            // rtxtNhanXetGVPB
-            // 
-            this.rtxtNhanXetGVPB.Location = new System.Drawing.Point(292, 210);
-            this.rtxtNhanXetGVPB.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.rtxtNhanXetGVPB.Name = "rtxtNhanXetGVPB";
-            this.rtxtNhanXetGVPB.Size = new System.Drawing.Size(358, 88);
-            this.rtxtNhanXetGVPB.TabIndex = 14;
-            this.rtxtNhanXetGVPB.Text = "";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(710, 64);
+            this.label9.Location = new System.Drawing.Point(601, 56);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(115, 20);
@@ -119,7 +96,7 @@
             // dateTimeNgayBaoCao
             // 
             this.dateTimeNgayBaoCao.Enabled = false;
-            this.dateTimeNgayBaoCao.Location = new System.Drawing.Point(885, 58);
+            this.dateTimeNgayBaoCao.Location = new System.Drawing.Point(885, 56);
             this.dateTimeNgayBaoCao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dateTimeNgayBaoCao.Name = "dateTimeNgayBaoCao";
             this.dateTimeNgayBaoCao.Size = new System.Drawing.Size(244, 28);
@@ -128,7 +105,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(710, 114);
+            this.label10.Location = new System.Drawing.Point(601, 96);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(121, 20);
@@ -137,10 +114,10 @@
             // 
             // dateTimeNgayDanhGia
             // 
-            this.dateTimeNgayDanhGia.Location = new System.Drawing.Point(885, 106);
+            this.dateTimeNgayDanhGia.Location = new System.Drawing.Point(885, 90);
             this.dateTimeNgayDanhGia.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dateTimeNgayDanhGia.Name = "dateTimeNgayDanhGia";
-            this.dateTimeNgayDanhGia.Size = new System.Drawing.Size(244, 28);
+            this.dateTimeNgayDanhGia.Size = new System.Drawing.Size(250, 28);
             this.dateTimeNgayDanhGia.TabIndex = 20;
             // 
             // dgvDoAnVaChamDiem
@@ -148,7 +125,7 @@
             this.dgvDoAnVaChamDiem.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDoAnVaChamDiem.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvDoAnVaChamDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDoAnVaChamDiem.Location = new System.Drawing.Point(24, 424);
+            this.dgvDoAnVaChamDiem.Location = new System.Drawing.Point(11, 390);
             this.dgvDoAnVaChamDiem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvDoAnVaChamDiem.Name = "dgvDoAnVaChamDiem";
             this.dgvDoAnVaChamDiem.RowHeadersWidth = 62;
@@ -157,24 +134,10 @@
             this.dgvDoAnVaChamDiem.TabIndex = 21;
             this.dgvDoAnVaChamDiem.SelectionChanged += new System.EventHandler(this.dgvDoAnVaChamDiem_SelectionChanged);
             // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Red;
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(837, 344);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(101, 44);
-            this.btnHuy.TabIndex = 23;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(710, 165);
+            this.label11.Location = new System.Drawing.Point(601, 167);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(141, 20);
             this.label11.TabIndex = 24;
@@ -183,7 +146,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(714, 210);
+            this.label12.Location = new System.Drawing.Point(601, 230);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(137, 20);
             this.label12.TabIndex = 26;
@@ -196,7 +159,7 @@
             this.btnLuu.Depth = 0;
             this.btnLuu.HighEmphasis = true;
             this.btnLuu.Icon = null;
-            this.btnLuu.Location = new System.Drawing.Point(735, 350);
+            this.btnLuu.Location = new System.Drawing.Point(264, 330);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnLuu.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnLuu.Name = "btnLuu";
@@ -209,20 +172,6 @@
             this.btnLuu.UseVisualStyleBackColor = true;
             this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // txtDiemGVHD
-            // 
-            this.txtDiemGVHD.Location = new System.Drawing.Point(885, 165);
-            this.txtDiemGVHD.Name = "txtDiemGVHD";
-            this.txtDiemGVHD.Size = new System.Drawing.Size(250, 28);
-            this.txtDiemGVHD.TabIndex = 43;
-            // 
-            // txtDiemGVPB
-            // 
-            this.txtDiemGVPB.Location = new System.Drawing.Point(885, 210);
-            this.txtDiemGVPB.Name = "txtDiemGVPB";
-            this.txtDiemGVPB.Size = new System.Drawing.Size(250, 28);
-            this.txtDiemGVPB.TabIndex = 44;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -231,17 +180,10 @@
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 45;
             // 
-            // txtDiemCuoiCung
-            // 
-            this.txtDiemCuoiCung.Location = new System.Drawing.Point(885, 263);
-            this.txtDiemCuoiCung.Name = "txtDiemCuoiCung";
-            this.txtDiemCuoiCung.Size = new System.Drawing.Size(250, 28);
-            this.txtDiemCuoiCung.TabIndex = 47;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(714, 263);
+            this.label5.Location = new System.Drawing.Point(601, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 48;
@@ -250,82 +192,281 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(24, 325);
+            this.label6.Location = new System.Drawing.Point(21, 263);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 20);
             this.label6.TabIndex = 49;
             this.label6.Text = "Mã đề tài";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 377);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(29, 20);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "ID";
-            // 
             // txtMaNhom
             // 
+            this.txtMaNhom.AllowPromptAsInput = true;
+            this.txtMaNhom.AnimateReadOnly = false;
+            this.txtMaNhom.AsciiOnly = false;
+            this.txtMaNhom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtMaNhom.BeepOnError = false;
+            this.txtMaNhom.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtMaNhom.Depth = 0;
             this.txtMaNhom.Enabled = false;
-            this.txtMaNhom.Location = new System.Drawing.Point(292, 56);
+            this.txtMaNhom.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaNhom.HidePromptOnLeave = false;
+            this.txtMaNhom.HideSelection = true;
+            this.txtMaNhom.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtMaNhom.LeadingIcon = null;
+            this.txtMaNhom.Location = new System.Drawing.Point(232, 56);
+            this.txtMaNhom.Mask = "";
+            this.txtMaNhom.MaxLength = 32767;
+            this.txtMaNhom.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMaNhom.Name = "txtMaNhom";
-            this.txtMaNhom.Size = new System.Drawing.Size(346, 28);
-            this.txtMaNhom.TabIndex = 53;
+            this.txtMaNhom.PasswordChar = '\0';
+            this.txtMaNhom.PrefixSuffixText = null;
+            this.txtMaNhom.PromptChar = '_';
+            this.txtMaNhom.ReadOnly = false;
+            this.txtMaNhom.RejectInputOnFirstFailure = false;
+            this.txtMaNhom.ResetOnPrompt = true;
+            this.txtMaNhom.ResetOnSpace = true;
+            this.txtMaNhom.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtMaNhom.SelectedText = "";
+            this.txtMaNhom.SelectionLength = 0;
+            this.txtMaNhom.SelectionStart = 0;
+            this.txtMaNhom.ShortcutsEnabled = true;
+            this.txtMaNhom.Size = new System.Drawing.Size(284, 48);
+            this.txtMaNhom.SkipLiterals = true;
+            this.txtMaNhom.TabIndex = 55;
+            this.txtMaNhom.TabStop = false;
+            this.txtMaNhom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaNhom.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtMaNhom.TrailingIcon = null;
+            this.txtMaNhom.UseSystemPasswordChar = false;
+            this.txtMaNhom.ValidatingType = null;
+            // 
+            // rtxtNhanXetGVPB
+            // 
+            this.rtxtNhanXetGVPB.AnimateReadOnly = false;
+            this.rtxtNhanXetGVPB.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtxtNhanXetGVPB.Depth = 0;
+            this.rtxtNhanXetGVPB.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.rtxtNhanXetGVPB.LeadingIcon = null;
+            this.rtxtNhanXetGVPB.Location = new System.Drawing.Point(232, 132);
+            this.rtxtNhanXetGVPB.MaxLength = 50;
+            this.rtxtNhanXetGVPB.MouseState = MaterialSkin.MouseState.OUT;
+            this.rtxtNhanXetGVPB.Multiline = false;
+            this.rtxtNhanXetGVPB.Name = "rtxtNhanXetGVPB";
+            this.rtxtNhanXetGVPB.Size = new System.Drawing.Size(284, 50);
+            this.rtxtNhanXetGVPB.TabIndex = 56;
+            this.rtxtNhanXetGVPB.Text = "";
+            this.rtxtNhanXetGVPB.TrailingIcon = null;
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnHuy.BackColor = System.Drawing.Color.Red;
+            this.btnHuy.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            this.btnHuy.Depth = 0;
+            this.btnHuy.HighEmphasis = true;
+            this.btnHuy.Icon = null;
+            this.btnHuy.Location = new System.Drawing.Point(544, 330);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnHuy.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.btnHuy.Size = new System.Drawing.Size(64, 36);
+            this.btnHuy.TabIndex = 57;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.btnHuy.UseAccentColor = false;
+            this.btnHuy.UseVisualStyleBackColor = false;
             // 
             // txtMaDeTai
             // 
+            this.txtMaDeTai.AllowPromptAsInput = true;
+            this.txtMaDeTai.AnimateReadOnly = false;
+            this.txtMaDeTai.AsciiOnly = false;
+            this.txtMaDeTai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtMaDeTai.BeepOnError = false;
+            this.txtMaDeTai.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtMaDeTai.Depth = 0;
             this.txtMaDeTai.Enabled = false;
-            this.txtMaDeTai.Location = new System.Drawing.Point(292, 317);
+            this.txtMaDeTai.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtMaDeTai.HidePromptOnLeave = false;
+            this.txtMaDeTai.HideSelection = true;
+            this.txtMaDeTai.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtMaDeTai.LeadingIcon = null;
+            this.txtMaDeTai.Location = new System.Drawing.Point(232, 230);
+            this.txtMaDeTai.Mask = "";
+            this.txtMaDeTai.MaxLength = 32767;
+            this.txtMaDeTai.MouseState = MaterialSkin.MouseState.OUT;
             this.txtMaDeTai.Name = "txtMaDeTai";
-            this.txtMaDeTai.Size = new System.Drawing.Size(358, 28);
-            this.txtMaDeTai.TabIndex = 54;
+            this.txtMaDeTai.PasswordChar = '\0';
+            this.txtMaDeTai.PrefixSuffixText = null;
+            this.txtMaDeTai.PromptChar = '_';
+            this.txtMaDeTai.ReadOnly = false;
+            this.txtMaDeTai.RejectInputOnFirstFailure = false;
+            this.txtMaDeTai.ResetOnPrompt = true;
+            this.txtMaDeTai.ResetOnSpace = true;
+            this.txtMaDeTai.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtMaDeTai.SelectedText = "";
+            this.txtMaDeTai.SelectionLength = 0;
+            this.txtMaDeTai.SelectionStart = 0;
+            this.txtMaDeTai.ShortcutsEnabled = true;
+            this.txtMaDeTai.Size = new System.Drawing.Size(284, 48);
+            this.txtMaDeTai.SkipLiterals = true;
+            this.txtMaDeTai.TabIndex = 58;
+            this.txtMaDeTai.TabStop = false;
+            this.txtMaDeTai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtMaDeTai.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtMaDeTai.TrailingIcon = null;
+            this.txtMaDeTai.UseSystemPasswordChar = false;
+            this.txtMaDeTai.ValidatingType = null;
             // 
-            // rtxNoiDungDoAn
+            // txtDiemCuoiCung
             // 
-            this.rtxNoiDungDoAn.Location = new System.Drawing.Point(292, 97);
-            this.rtxNoiDungDoAn.Name = "rtxNoiDungDoAn";
-            this.rtxNoiDungDoAn.Size = new System.Drawing.Size(346, 96);
-            this.rtxNoiDungDoAn.TabIndex = 55;
-            this.rtxNoiDungDoAn.Text = "";
+            this.txtDiemCuoiCung.AllowPromptAsInput = true;
+            this.txtDiemCuoiCung.AnimateReadOnly = false;
+            this.txtDiemCuoiCung.AsciiOnly = false;
+            this.txtDiemCuoiCung.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDiemCuoiCung.BeepOnError = false;
+            this.txtDiemCuoiCung.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemCuoiCung.Depth = 0;
+            this.txtDiemCuoiCung.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDiemCuoiCung.HidePromptOnLeave = false;
+            this.txtDiemCuoiCung.HideSelection = true;
+            this.txtDiemCuoiCung.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtDiemCuoiCung.LeadingIcon = null;
+            this.txtDiemCuoiCung.Location = new System.Drawing.Point(885, 287);
+            this.txtDiemCuoiCung.Mask = "";
+            this.txtDiemCuoiCung.MaxLength = 32767;
+            this.txtDiemCuoiCung.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDiemCuoiCung.Name = "txtDiemCuoiCung";
+            this.txtDiemCuoiCung.PasswordChar = '\0';
+            this.txtDiemCuoiCung.PrefixSuffixText = null;
+            this.txtDiemCuoiCung.PromptChar = '_';
+            this.txtDiemCuoiCung.ReadOnly = false;
+            this.txtDiemCuoiCung.RejectInputOnFirstFailure = false;
+            this.txtDiemCuoiCung.ResetOnPrompt = true;
+            this.txtDiemCuoiCung.ResetOnSpace = true;
+            this.txtDiemCuoiCung.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDiemCuoiCung.SelectedText = "";
+            this.txtDiemCuoiCung.SelectionLength = 0;
+            this.txtDiemCuoiCung.SelectionStart = 0;
+            this.txtDiemCuoiCung.ShortcutsEnabled = true;
+            this.txtDiemCuoiCung.Size = new System.Drawing.Size(250, 48);
+            this.txtDiemCuoiCung.SkipLiterals = true;
+            this.txtDiemCuoiCung.TabIndex = 59;
+            this.txtDiemCuoiCung.TabStop = false;
+            this.txtDiemCuoiCung.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDiemCuoiCung.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemCuoiCung.TrailingIcon = null;
+            this.txtDiemCuoiCung.UseSystemPasswordChar = false;
+            this.txtDiemCuoiCung.ValidatingType = null;
             // 
-            // txtID
+            // txtDiemGVPB
             // 
-            this.txtID.Enabled = false;
-            this.txtID.Location = new System.Drawing.Point(292, 374);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(358, 28);
-            this.txtID.TabIndex = 56;
+            this.txtDiemGVPB.AllowPromptAsInput = true;
+            this.txtDiemGVPB.AnimateReadOnly = false;
+            this.txtDiemGVPB.AsciiOnly = false;
+            this.txtDiemGVPB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDiemGVPB.BeepOnError = false;
+            this.txtDiemGVPB.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemGVPB.Depth = 0;
+            this.txtDiemGVPB.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDiemGVPB.HidePromptOnLeave = false;
+            this.txtDiemGVPB.HideSelection = true;
+            this.txtDiemGVPB.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtDiemGVPB.LeadingIcon = null;
+            this.txtDiemGVPB.Location = new System.Drawing.Point(885, 209);
+            this.txtDiemGVPB.Mask = "";
+            this.txtDiemGVPB.MaxLength = 32767;
+            this.txtDiemGVPB.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDiemGVPB.Name = "txtDiemGVPB";
+            this.txtDiemGVPB.PasswordChar = '\0';
+            this.txtDiemGVPB.PrefixSuffixText = null;
+            this.txtDiemGVPB.PromptChar = '_';
+            this.txtDiemGVPB.ReadOnly = false;
+            this.txtDiemGVPB.RejectInputOnFirstFailure = false;
+            this.txtDiemGVPB.ResetOnPrompt = true;
+            this.txtDiemGVPB.ResetOnSpace = true;
+            this.txtDiemGVPB.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDiemGVPB.SelectedText = "";
+            this.txtDiemGVPB.SelectionLength = 0;
+            this.txtDiemGVPB.SelectionStart = 0;
+            this.txtDiemGVPB.ShortcutsEnabled = true;
+            this.txtDiemGVPB.Size = new System.Drawing.Size(250, 48);
+            this.txtDiemGVPB.SkipLiterals = true;
+            this.txtDiemGVPB.TabIndex = 60;
+            this.txtDiemGVPB.TabStop = false;
+            this.txtDiemGVPB.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDiemGVPB.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemGVPB.TrailingIcon = null;
+            this.txtDiemGVPB.UseSystemPasswordChar = false;
+            this.txtDiemGVPB.ValidatingType = null;
+            // 
+            // txtDiemGVHD
+            // 
+            this.txtDiemGVHD.AllowPromptAsInput = true;
+            this.txtDiemGVHD.AnimateReadOnly = false;
+            this.txtDiemGVHD.AsciiOnly = false;
+            this.txtDiemGVHD.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDiemGVHD.BeepOnError = false;
+            this.txtDiemGVHD.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemGVHD.Depth = 0;
+            this.txtDiemGVHD.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.txtDiemGVHD.HidePromptOnLeave = false;
+            this.txtDiemGVHD.HideSelection = true;
+            this.txtDiemGVHD.InsertKeyMode = System.Windows.Forms.InsertKeyMode.Default;
+            this.txtDiemGVHD.LeadingIcon = null;
+            this.txtDiemGVHD.Location = new System.Drawing.Point(885, 134);
+            this.txtDiemGVHD.Mask = "";
+            this.txtDiemGVHD.MaxLength = 32767;
+            this.txtDiemGVHD.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtDiemGVHD.Name = "txtDiemGVHD";
+            this.txtDiemGVHD.PasswordChar = '\0';
+            this.txtDiemGVHD.PrefixSuffixText = null;
+            this.txtDiemGVHD.PromptChar = '_';
+            this.txtDiemGVHD.ReadOnly = false;
+            this.txtDiemGVHD.RejectInputOnFirstFailure = false;
+            this.txtDiemGVHD.ResetOnPrompt = true;
+            this.txtDiemGVHD.ResetOnSpace = true;
+            this.txtDiemGVHD.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtDiemGVHD.SelectedText = "";
+            this.txtDiemGVHD.SelectionLength = 0;
+            this.txtDiemGVHD.SelectionStart = 0;
+            this.txtDiemGVHD.ShortcutsEnabled = true;
+            this.txtDiemGVHD.Size = new System.Drawing.Size(250, 48);
+            this.txtDiemGVHD.SkipLiterals = true;
+            this.txtDiemGVHD.TabIndex = 61;
+            this.txtDiemGVHD.TabStop = false;
+            this.txtDiemGVHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtDiemGVHD.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludeLiterals;
+            this.txtDiemGVHD.TrailingIcon = null;
+            this.txtDiemGVHD.UseSystemPasswordChar = false;
+            this.txtDiemGVHD.ValidatingType = null;
             // 
             // ChamDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1220, 742);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.rtxNoiDungDoAn);
+            this.ClientSize = new System.Drawing.Size(1220, 701);
+            this.Controls.Add(this.txtDiemGVHD);
+            this.Controls.Add(this.txtDiemGVPB);
+            this.Controls.Add(this.txtDiemCuoiCung);
             this.Controls.Add(this.txtMaDeTai);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.rtxtNhanXetGVPB);
             this.Controls.Add(this.txtMaNhom);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDiemCuoiCung);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtDiemGVPB);
-            this.Controls.Add(this.txtDiemGVHD);
             this.Controls.Add(this.btnLuu);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.btnHuy);
             this.Controls.Add(this.dgvDoAnVaChamDiem);
             this.Controls.Add(this.dateTimeNgayDanhGia);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dateTimeNgayBaoCao);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.rtxtNhanXetGVPB);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,29 +485,25 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox rtxtNhanXetGVPB;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dateTimeNgayBaoCao;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dateTimeNgayDanhGia;
         private System.Windows.Forms.DataGridView dgvDoAnVaChamDiem;
-        private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private MaterialSkin.Controls.MaterialButton btnLuu;
-        private System.Windows.Forms.TextBox txtDiemGVHD;
-        private System.Windows.Forms.TextBox txtDiemGVPB;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDiemCuoiCung;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtMaNhom;
-        private System.Windows.Forms.TextBox txtMaDeTai;
-        private System.Windows.Forms.RichTextBox rtxNoiDungDoAn;
-        private System.Windows.Forms.TextBox txtID;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtMaNhom;
+        private MaterialSkin.Controls.MaterialTextBox rtxtNhanXetGVPB;
+        private MaterialSkin.Controls.MaterialButton btnHuy;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtMaDeTai;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtDiemCuoiCung;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtDiemGVPB;
+        private MaterialSkin.Controls.MaterialMaskedTextBox txtDiemGVHD;
     }
 }
 
