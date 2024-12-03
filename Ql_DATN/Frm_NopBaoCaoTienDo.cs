@@ -97,7 +97,7 @@ namespace Ql_DATN
                 }
                 else
                 {
-                    MessageBox.Show("Nộp báo cáo thất bại. Vui lòng thử lại sau!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã báo cáo đã tồn tại. Vui lòng nhập mã khác!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -109,6 +109,31 @@ namespace Ql_DATN
         private void Frm_NopBaoCaoTienDo_Load(object sender, EventArgs e)
         {
             LoadComboBoxData();
+        }
+
+        private void txtTuanThu_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Kiểm tra nếu phím không phải là số
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true; // Chặn ký tự
+            }
+        }
+
+        private void ckbCo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ckbCo.Checked)
+            {
+                ckbKhong.Checked = false;
+            }
+        }
+
+        private void ckbKhong_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ckbKhong.Checked)
+            {
+                ckbCo.Checked = false;
+            }
         }
     }
 }

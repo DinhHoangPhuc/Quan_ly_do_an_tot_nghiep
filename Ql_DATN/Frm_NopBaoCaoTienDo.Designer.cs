@@ -170,6 +170,7 @@
             this.txtTuanThu.Name = "txtTuanThu";
             this.txtTuanThu.Size = new System.Drawing.Size(195, 22);
             this.txtTuanThu.TabIndex = 11;
+            this.txtTuanThu.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTuanThu_KeyPress);
             // 
             // DTPNgayBaoCao
             // 
@@ -209,6 +210,7 @@
             this.ckbCo.TabIndex = 14;
             this.ckbCo.Text = "Có";
             this.ckbCo.UseVisualStyleBackColor = true;
+            this.ckbCo.CheckedChanged += new System.EventHandler(this.ckbCo_CheckedChanged);
             // 
             // ckbKhong
             // 
@@ -225,6 +227,7 @@
             this.ckbKhong.TabIndex = 17;
             this.ckbKhong.Text = "Không";
             this.ckbKhong.UseVisualStyleBackColor = true;
+            this.ckbKhong.CheckedChanged += new System.EventHandler(this.ckbKhong_CheckedChanged);
             // 
             // cmbMaNhom
             // 
