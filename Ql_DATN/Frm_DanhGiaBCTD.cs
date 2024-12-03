@@ -78,6 +78,34 @@ namespace Ql_DATN
             }
         }
 
+        private void LoadDanhGiaBaoCaoTienDoData()
+        {
+            try
+            {
+                // Kết nối cơ sở dữ liệu và truy vấn dữ liệu
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var danhGiaBaoCaoData = context.DanhGiaBaoCaoTienDos.ToList();
+
+                    // Gán dữ liệu vào DataGridView
+                    dgvDanhGiaBCTD.DataSource = danhGiaBaoCaoData.Select(dg => new
+                    {
+                        MaDanhGia = dg.MaDanhGia,
+                        MaBaoCao = dg.MaBaoCao,
+                        NgayDanhGia = dg.NgayDanhGia,
+                        NoiDung = dg.NoiDung,
+                        MaNhom = dg.MaNhom,
+                        MaGiangVien = dg.MaGiangVien
+                    }).ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi tải dữ liệu: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
         private void btnGuiDanhGia_Click(object sender, EventArgs e)
         {
             try
@@ -97,6 +125,43 @@ namespace Ql_DATN
                     return;
                 }
 
+                DateTime ngayNopBaoCao;
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var baoCao = context.BaoCaoTienDos.FirstOrDefault(bc => bc.MaBaoCao == maBaoCao);
+                    if (baoCao == null)
+                    {
+                        MessageBox.Show("Không tìm thấy mã báo cáo trong hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    ngayNopBaoCao = baoCao.NgayBaoCao;
+                }
+
+                // Kiểm tra ngày đánh giá phải sau ngày nộp báo cáo
+                if (ngayDanhGia <= ngayNopBaoCao)
+                {
+                    MessageBox.Show("Ngày đánh giá phải sau ngày nộp báo cáo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                using (var context = new QLDADataContext("Data Source=MSI;Initial Catalog=QL_DOAN_TEST;User ID=sa;Password=123"))
+                {
+                    var baoCao = context.BaoCaoTienDos.FirstOrDefault(bc => bc.MaBaoCao == maBaoCao);
+
+                    if (baoCao == null)
+                    {
+                        MessageBox.Show("Không tìm thấy mã báo cáo trong hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    // Kiểm tra MaNhom và MaGiangVien có khớp hay không
+                    if (baoCao.MaNhom != maNhom || baoCao.MaGiangVien != maGiangVien)
+                    {
+                        MessageBox.Show("Mã Nhóm hoặc Mã Giảng Viên không khớp với thông tin của Báo Cáo!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+
                 // Gọi BUS để thêm dữ liệu vào database
                 bool ketQua = danhGiaBUS.ThemDanhGia(maDanhGia, maBaoCao, ngayDanhGia, maNhom, maGiangVien, noiDung);
 
@@ -107,7 +172,7 @@ namespace Ql_DATN
                 }
                 else
                 {
-                    MessageBox.Show("Đánh giá báo cáo thất bại. Vui lòng thử lại sau!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã đánh giá đã tồn tại. Vui lòng thử lại sau!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
@@ -120,6 +185,8 @@ namespace Ql_DATN
         {
             LoadComboBoxData();
             LoadBaoCaoTienDoData();
+            LoadDanhGiaBaoCaoTienDoData();
+
         }
     }
 }

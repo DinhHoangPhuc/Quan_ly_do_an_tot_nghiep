@@ -43,14 +43,18 @@
             this.cmbMaNhom = new System.Windows.Forms.ComboBox();
             this.cmbMaGiangVien = new System.Windows.Forms.ComboBox();
             this.dgvBaoCaoTienDo = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dgvDanhGiaBCTD = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTienDo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhGiaBCTD)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(383, 9);
+            this.label1.Location = new System.Drawing.Point(805, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(416, 38);
@@ -94,7 +98,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(577, 112);
+            this.label5.Location = new System.Drawing.Point(81, 393);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 22);
@@ -130,7 +134,7 @@
             this.btnGuiDanhGia.Depth = 0;
             this.btnGuiDanhGia.HighEmphasis = true;
             this.btnGuiDanhGia.Icon = null;
-            this.btnGuiDanhGia.Location = new System.Drawing.Point(581, 337);
+            this.btnGuiDanhGia.Location = new System.Drawing.Point(85, 702);
             this.btnGuiDanhGia.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
             this.btnGuiDanhGia.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnGuiDanhGia.Name = "btnGuiDanhGia";
@@ -166,11 +170,11 @@
             this.multitxtNDDanhGia.Depth = 0;
             this.multitxtNDDanhGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.multitxtNDDanhGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.multitxtNDDanhGia.Location = new System.Drawing.Point(581, 138);
+            this.multitxtNDDanhGia.Location = new System.Drawing.Point(85, 419);
             this.multitxtNDDanhGia.Margin = new System.Windows.Forms.Padding(4);
             this.multitxtNDDanhGia.MouseState = MaterialSkin.MouseState.HOVER;
             this.multitxtNDDanhGia.Name = "multitxtNDDanhGia";
-            this.multitxtNDDanhGia.Size = new System.Drawing.Size(552, 185);
+            this.multitxtNDDanhGia.Size = new System.Drawing.Size(552, 272);
             this.multitxtNDDanhGia.TabIndex = 11;
             this.multitxtNDDanhGia.Text = "";
             // 
@@ -201,18 +205,51 @@
             // dgvBaoCaoTienDo
             // 
             this.dgvBaoCaoTienDo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBaoCaoTienDo.Location = new System.Drawing.Point(85, 439);
+            this.dgvBaoCaoTienDo.Location = new System.Drawing.Point(736, 127);
             this.dgvBaoCaoTienDo.Name = "dgvBaoCaoTienDo";
             this.dgvBaoCaoTienDo.RowHeadersWidth = 51;
             this.dgvBaoCaoTienDo.RowTemplate.Height = 24;
-            this.dgvBaoCaoTienDo.Size = new System.Drawing.Size(1048, 293);
+            this.dgvBaoCaoTienDo.Size = new System.Drawing.Size(1014, 327);
             this.dgvBaoCaoTienDo.TabIndex = 17;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(732, 102);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(216, 22);
+            this.label8.TabIndex = 18;
+            this.label8.Text = "Danh sách báo cáo đã nộp";
+            // 
+            // dgvDanhGiaBCTD
+            // 
+            this.dgvDanhGiaBCTD.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhGiaBCTD.Location = new System.Drawing.Point(737, 553);
+            this.dgvDanhGiaBCTD.Name = "dgvDanhGiaBCTD";
+            this.dgvDanhGiaBCTD.RowHeadersWidth = 51;
+            this.dgvDanhGiaBCTD.RowTemplate.Height = 24;
+            this.dgvDanhGiaBCTD.Size = new System.Drawing.Size(1014, 329);
+            this.dgvDanhGiaBCTD.TabIndex = 19;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(732, 528);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(162, 22);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Danh sách đánh giá";
             // 
             // Frm_DanhGiaBCTD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1210, 778);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dgvDanhGiaBCTD);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvBaoCaoTienDo);
             this.Controls.Add(this.cmbMaGiangVien);
             this.Controls.Add(this.cmbMaNhom);
@@ -233,6 +270,7 @@
             this.Text = "Frm_DanhGiaBCTD";
             this.Load += new System.EventHandler(this.Frm_DanhGiaBCTD_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBaoCaoTienDo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhGiaBCTD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -255,5 +293,8 @@
         private System.Windows.Forms.ComboBox cmbMaNhom;
         private System.Windows.Forms.ComboBox cmbMaGiangVien;
         private System.Windows.Forms.DataGridView dgvBaoCaoTienDo;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridView dgvDanhGiaBCTD;
+        private System.Windows.Forms.Label label9;
     }
 }
