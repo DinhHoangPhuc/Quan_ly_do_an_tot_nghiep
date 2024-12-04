@@ -50,20 +50,6 @@ namespace Ql_DATN
             dgvDeTai.DataSource = deTaiPhanHoi.LocDeTaiTheoMaGVHD(cbGVHD.SelectedValue.ToString());
         }
 
-        //private void txtTimKiemGV_Validating(object sender, CancelEventArgs e)
-        //{
-        //    if (string.IsNullOrWhiteSpace(txtTimKiemGV.Text))
-        //    {
-        //        e.Cancel = true;
-        //        errorProvider.SetError(txtTimKiemGV, "Tên giảng viên không được để trống.");
-        //    }
-        //    else
-        //    {
-        //        e.Cancel = false;
-        //        errorProvider.SetError(txtTimKiemGV, null);
-        //    }
-        //}
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrWhiteSpace(txtTimKiemGV.Text))
@@ -85,37 +71,48 @@ namespace Ql_DATN
                 dateNgayDuyet.Text = row.Cells["NgayDuyet"].Value?.ToString();
                 txtMaGVPB.Text = row.Cells["MaGVPB"].Value?.ToString();
                 txtMaBoMon.Text = row.Cells["MaBoMon"].Value.ToString();
-
-                LoadPhanHoiByDeTai(row.Cells["MaDeTai"].Value.ToString());
             }
         }
 
-        private void LoadPhanHoiByDeTai(string maDeTai)
+        private void btnLuuTrangThai_Click(object sender, EventArgs e)
         {
-            List<PhanHoiDeTaiDTO> lstPhanHoi = deTaiPhanHoi.GetPhanHoiDeTaiByMaDeTai(maDeTai);
-            if (lstPhanHoi != null)
+            try
             {
-                dgvPhanHoi.DataSource = lstPhanHoi;
-            }
-        }
+                deTaiPhanHoi.CapNhatTrangThaiDeTai(txtMaDeTai.Text, cbTrangThai.SelectedValue.ToString());
+                deTaiPhanHoi.LuuLichSuTrangThaiDeTai(txtMaDeTai.Text, cbTrangThai.SelectedValue.ToString(), Session.Username);
 
-        private void dgvPhanHoi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+                MessageBox.Show("Cập nhật trạng thái đề tài thành công");
+            }
+            catch (Exception ex)
             {
-                DataGridViewRow row = dgvPhanHoi.Rows[e.RowIndex];
-                txtMaPhanHoi.Text = row.Cells["MaPhanHoi"].Value.ToString();
-                txtMaDeTaiPhanHoi.Text = row.Cells["MaDeTai"].Value.ToString();
-                txtNoiDungChinhSua.Text = row.Cells["NoiDungChinhSua"].Value?.ToString();
-                txtPhanHoi.Text = row.Cells["NoiDungPhanHoi"].Value.ToString();
-                dateNgayChinhSua.Text = row.Cells["NgayChinhSua"].Value?.ToString();
-                dateNgayPhanHoi.Text = row.Cells["NgayPhanHoi"].Value.ToString();
+                MessageBox.Show(ex.Message);
             }
         }
 
-        private void btnLuuPhanHoi_Click(object sender, EventArgs e)
+        private void btnXemChiTietDeTai_Click(object sender, EventArgs e)
         {
+            if(!string.IsNullOrWhiteSpace(txtMaDeTai.Text))
+            {
+                FormChiTietDeTai formChiTietDeTai = new FormChiTietDeTai(txtMaDeTai.Text);
+                formChiTietDeTai.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn đề tài");
+            }
+        }
 
+        private void btnYeuCauChinhSua_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(txtMaDeTai.Text))
+            {
+                FormYeuCauChinhSuaDeTai formYeuCauChinhSua = new FormYeuCauChinhSuaDeTai(txtMaDeTai.Text);
+                formYeuCauChinhSua.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn đề tài");
+            }
         }
     }
-}
+ }

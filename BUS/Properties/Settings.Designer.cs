@@ -44,5 +44,16 @@ namespace BUS.Properties {
                 return ((string)(this["QL_DOAN_TESTConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CUA-PHUC\\SQLEXPRESS;Initial Catalog=QL_DOAN_TEST_2;Persist Sec" +
+            "urity Info=True;User ID=sa;Password=123456;TrustServerCertificate=True")]
+        public string QL_DOAN_TEST_2ConnectionString {
+            get {
+                return ((string)(this["QL_DOAN_TEST_2ConnectionString"]));
+            }
+        }
     }
 }

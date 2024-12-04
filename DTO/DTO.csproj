@@ -44,8 +44,11 @@
     <Compile Include="DeTaiDTO.cs" />
     <Compile Include="DeXuatDetai.cs" />
     <Compile Include="GiangVienHuongDanDTO.cs" />
+    <Compile Include="LichSuChinhSuaDeTaiDTO.cs" />
+    <Compile Include="LichSuTrangThaiDTO.cs" />
     <Compile Include="PhanHoiDeTaiDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="YeuCauChinhSuaDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

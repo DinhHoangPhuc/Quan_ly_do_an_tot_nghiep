@@ -24,6 +24,7 @@ namespace Ql_DATN
 
         private void FormDeXuatDeTai_Load(object sender, EventArgs e)
         {
+            LoadComboTrangThai();
             LoadDataDeTai();
         }
 
@@ -51,30 +52,7 @@ namespace Ql_DATN
                 txtTrangThai.Text = row.Cells["TrangThai"].Value.ToString();
                 dateNgayDeXuat.Text = row.Cells["NgayDeXuat"].Value.ToString();
 
-                LoadPhanHoiByDeTai(row.Cells["MaDeTai"].Value.ToString());
-            }
-        }
-
-        private void LoadPhanHoiByDeTai(string maDeTai)
-        {
-            List<PhanHoiDeTaiDTO> lstPhanHoi = deTaiPhanHoi.GetPhanHoiDeTaiByMaDeTai(maDeTai);
-            if (lstPhanHoi != null)
-            {
-                dgvPhanHoi.DataSource = lstPhanHoi;
-            }
-        }
-
-        private void dgvPhanHoi_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if(e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dgvPhanHoi.Rows[e.RowIndex];
-                txtmaPhanHoi.Text = row.Cells["MaPhanHoi"].Value.ToString();
-                txtMaDeTaiPhanHoi.Text = row.Cells["MaDeTai"].Value.ToString();
-                txtSuaDetai.Text = row.Cells["NoiDungChinhSua"].Value?.ToString();
-                txtPhanHoi.Text = row.Cells["NoiDungPhanHoi"].Value.ToString();
-                dateNgayCinhSua.Text = row.Cells["NgayChinhSua"].Value?.ToString();
-                dateNgayPhanHoi.Text = row.Cells["NgayPhanHoi"].Value.ToString();
+                //LoadPhanHoiByDeTai(row.Cells["MaDeTai"].Value.ToString());
             }
         }
 
@@ -87,16 +65,26 @@ namespace Ql_DATN
                 deXuatDetai.MoTa = txtMoTa.Text;
                 deXuatDetai.MaGVHD = deTaiPhanHoi.GetMaGVByMaND(MaND);
 
-                bool insertResult = deTaiPhanHoi.DeXuatDeTai(deXuatDetai);
-
-                if (insertResult)
+                try
                 {
+                    deTaiPhanHoi.DeXuatDeTai(deXuatDetai, MaND);
                     MessageBox.Show("Đề xuất đề tài thành công");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Lỗi thêm đề tài");
+                    MessageBox.Show(ex.Message);
                 }
+
+                    //bool insertResult = deTaiPhanHoi.DeXuatDeTai(deXuatDetai);
+
+                    //if (insertResult)
+                    //{
+                    //    MessageBox.Show("Đề xuất đề tài thành công");
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Lỗi thêm đề tài");
+                    //}
             }
         }
 
@@ -115,7 +103,7 @@ namespace Ql_DATN
         }
 
         private void txtMoTa_Validating(object sender, CancelEventArgs e)
-        {
+        {   
             if (string.IsNullOrWhiteSpace(txtMoTa.Text))
             {
                 e.Cancel = true;
@@ -126,6 +114,29 @@ namespace Ql_DATN
                 e.Cancel = false;
                 errorProviderTextBox.SetError(txtMoTa, null);
             }
+        }
+
+        private void btnChiTietDeTai_Click(object sender, EventArgs e)
+        {
+            if(!String.IsNullOrWhiteSpace(txtMaDeTai.Text))
+            {
+                FormCapNhatDeTai formChiTietDeTai = new FormCapNhatDeTai(txtMaDeTai.Text);
+                formChiTietDeTai.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn đề tài");
+            }
+        }
+
+        private void LoadComboTrangThai()
+        {
+            cbLocTrangThai.DataSource = deTaiPhanHoi.GetListTrangThaiDeTai();
+        }
+
+        private void cbLocTrangThai_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dgvDeTai.DataSource = deTaiPhanHoi.LocDeTaiTheoTrangThai(cbLocTrangThai.SelectedValue.ToString(), MaND);
         }
     }
 }

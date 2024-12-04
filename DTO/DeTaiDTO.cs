@@ -17,6 +17,8 @@ namespace DTO
         public string MaGVHD { get; set; }
         public string MaGVPB { get; set; }
         public string MaBoMon { get; set; }
+        public bool? DaChinhSua { get; set; }
+        public DateTime? CapNhatLanCuoi { get; set; }
         public DeTaiDTO(string maDeTai, string tenDeTai, string moTa, string trangThai, DateTime ngayDeXuat, DateTime? ngayDuyet, string maGVHD, string maGVPB)
         {
             MaDeTai = maDeTai;

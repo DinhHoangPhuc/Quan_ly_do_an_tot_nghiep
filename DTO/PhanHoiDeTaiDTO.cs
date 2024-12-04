@@ -24,5 +24,9 @@ namespace DTO
             NgayChinhSua = ngayChinhSua;
             NgayPhanHoi = ngayPhanHoi;
         }
+
+        public PhanHoiDeTaiDTO()
+        {
+        }
     }
 }

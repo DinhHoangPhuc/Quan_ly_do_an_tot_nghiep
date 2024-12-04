@@ -63,6 +63,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCapNhatDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCapNhatDeTai.Designer.cs">
+      <DependentUpon>FormCapNhatDeTai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChiTietDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChiTietDeTai.Designer.cs">
+      <DependentUpon>FormChiTietDeTai.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +111,12 @@
     <Compile Include="FormTrangChu.Designer.cs">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormYeuCauChinhSuaDeTai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYeuCauChinhSuaDeTai.Designer.cs">
+      <DependentUpon>FormYeuCauChinhSuaDeTai.cs</DependentUpon>
+    </Compile>
     <Compile Include="NopDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +131,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCapNhatDeTai.resx">
+      <DependentUpon>FormCapNhatDeTai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChiTietDeTai.resx">
+      <DependentUpon>FormChiTietDeTai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDeXuatDeTai.resx">
       <DependentUpon>FormDeXuatDeTai.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +145,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormTrangChu.resx">
       <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYeuCauChinhSuaDeTai.resx">
+      <DependentUpon>FormYeuCauChinhSuaDeTai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NopDoAn.resx">
       <DependentUpon>NopDoAn.cs</DependentUpon>

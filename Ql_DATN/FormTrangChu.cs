@@ -19,7 +19,7 @@ namespace Ql_DATN
         private Form frmDeXuatDeTai;
         private Form frmDuyetDeTai;
         private Form formQuanLyNguoiDung;
-        private Form frmPhanQuyen;
+        private Form frmNopDoAn;
         private Form frmTinhLuong;
         private Form frmQuanLyViPham;
 
@@ -45,6 +45,7 @@ namespace Ql_DATN
         {
             frmDeXuatDeTai = new FormDeXuatDeTai();
             frmDuyetDeTai = new FormDuyetDeTai();
+            frmNopDoAn = new NopDoAn();
             //formQuanLyNguoiDung = new FormQuanLyNguoiDung();
             //frmPhanQuyen = new FormPhanQuyen();
             //frmQuanLyViPham = new FormViPham();
@@ -155,7 +156,7 @@ namespace Ql_DATN
             }
             else if (tabControl.SelectedTab == NopDoAnPage)
             {
-                AddFormPhanQuyenToTabPage();
+                AddFormNopDoAnToTabPage();
             }
             else if (tabControl.SelectedTab == NopBaoCaoTienDoPage)
             {
@@ -220,16 +221,16 @@ namespace Ql_DATN
             formQuanLyNguoiDung.Show();
         }
 
-        private void AddFormPhanQuyenToTabPage()
+        private void AddFormNopDoAnToTabPage()
         {
-            frmPhanQuyen.TopLevel = false;
-            frmPhanQuyen.FormBorderStyle = FormBorderStyle.None;
-            frmPhanQuyen.Dock = DockStyle.Fill;
+            frmNopDoAn.TopLevel = false;
+            frmNopDoAn.FormBorderStyle = FormBorderStyle.None;
+            frmNopDoAn.Dock = DockStyle.Fill;
 
             NopDoAnPage.Controls.Clear();
 
-            NopDoAnPage.Controls.Add(frmPhanQuyen);
-            frmPhanQuyen.Show();
+            NopDoAnPage.Controls.Add(frmNopDoAn);
+            frmNopDoAn.Show();
         }
 
         private void AddFormQuanLyTienLuongToTabPage()
