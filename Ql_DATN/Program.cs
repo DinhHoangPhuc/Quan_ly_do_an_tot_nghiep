@@ -17,7 +17,7 @@ namespace Ql_DATN
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new XetDuyetDangKy());
+            Application.Run(new FormDangNhap());
         }
     }
 }
