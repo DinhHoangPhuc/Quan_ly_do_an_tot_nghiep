@@ -12,7 +12,7 @@ namespace BUS.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.12.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "17.11.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -26,8 +26,8 @@ namespace BUS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-HT2U3NT\\SQLEXPRESS;Initial Catalog=QuanLyDeTaiTotNghiep;Integ" +
-            "rated Security=True;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TQ-HOAN03;Initial Catalog=QL_DOAN;Persist Security Info=True;User ID=" +
+            "sa;Password=123;TrustServerCertificate=True")]
         public string QuanLyDeTaiTotNghiepConnectionString {
             get {
                 return ((string)(this["QuanLyDeTaiTotNghiepConnectionString"]));
@@ -37,8 +37,8 @@ namespace BUS.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-CUA-PHUC\\SQLEXPRESS;Initial Catalog=QL_DOAN_TEST;Persist Secur" +
-            "ity Info=True;User ID=sa;Password=123456;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TQ-HOAN03;Initial Catalog=QL_DOAN;User ID=sa;Password=123;TrustServer" +
+            "Certificate=True")]
         public string QL_DOAN_TESTConnectionString {
             get {
                 return ((string)(this["QL_DOAN_TESTConnectionString"]));
