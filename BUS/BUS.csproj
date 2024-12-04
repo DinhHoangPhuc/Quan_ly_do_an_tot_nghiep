@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="ChamDiemBUS.cs" />
     <Compile Include="ChamDiemDAL.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="DangKiDeTaiBUS.cs" />
+    <Compile Include="DangKiDeTaiDAL.cs" />
     <Compile Include="DangNhap.cs" />
     <Compile Include="DanhGiaBCTDBUS.cs" />
     <Compile Include="DeTaiPhanHoi.cs" />
